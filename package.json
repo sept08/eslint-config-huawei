@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-huawei",
+  "version": "0.1.0",
+  "description": "huawei eslint rules",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sept08/eslint-config-huawei.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Tian",
+  "license": "MIT"
+}
