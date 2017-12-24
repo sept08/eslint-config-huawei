@@ -118,7 +118,8 @@ module.exports = {
     'valid-jsdoc': [
       'warn',
       {
-        requireReturn: false
+        requireReturn: false,
+        requireReturnDescription: false
       }
     ],
     // enforce comparing typeof expressions against valid strings('undefined', 'object', 'boolean', 'number', 'string', 'function' and 'symbol')

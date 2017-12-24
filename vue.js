@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    './index.js'
+    './index.js',
   ],
   parser: 'vue-eslint-parser',
   plugins: [
@@ -46,7 +46,7 @@ module.exports = {
     'vue/valid-v-show': 'error',
     'vue/valid-v-text': 'error',
     // @fixable {{}}中空格限制always限制为1个
-    'vue/mustache-interpolation-spacing': [1, 'always'|'never'],
+    'vue/mustache-interpolation-spacing': 'error',
     // @fixable 禁止出现连续空格
     'vue/no-multi-spaces': 'error',
 
@@ -58,15 +58,18 @@ module.exports = {
     // props添加类型便于识别
     'vue/require-prop-types': 'error',
     // @fixable v-bind简写
-    'vue/v-bind-style': 'shorthand',
+    'vue/v-bind-style': 'error',
     // @fixable v-on简写
-    'vue/:v-on-style': 'shorthand',
+    'vue/v-on-style': 'error',
     // @fixable html属性值单引号
-    'vue/html-quotes': 'single',
+    'vue/html-quotes': [
+      'error',
+      'single'
+    ],
     // 禁止出现难以理解的 v-if 和 v-for
     'vue/no-confusing-v-for-v-if': 'error',
     // 组件DOM中不加this
-    'vue/this-in-template': [2, 'always'|'never'],
+    'vue/this-in-template': 'error',
     // 组件中官方推荐的option顺序
     "vue/order-in-components": ["error", {
         order: [
@@ -114,6 +117,6 @@ module.exports = {
     'vue/name-property-casing': 'off',
     // props不限制是否有默认值
     'vue/require-default-prop': 'off',
-    
+
   }
 }
