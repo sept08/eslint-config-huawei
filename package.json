@@ -15,5 +15,9 @@
     "eslintconfig"
   ],
   "author": "Tian",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint-plugin-vue": "^2.1.0"
+  }
 }
