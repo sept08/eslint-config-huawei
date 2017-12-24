@@ -14,7 +14,7 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "Tian",
+  "author": "Tian <littlejixing@163.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.0.3",

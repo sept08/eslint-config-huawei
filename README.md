@@ -14,6 +14,24 @@ Huawei eslint rules
 ``` shell
 npm install --save-dev eslint-config-huawei babel-eslint
 ```
+### 配置方法
+在项目根目录下创建`.eslintrc.js`，并复制以下内容：
+``` javascript
+module.exports = {
+    extends: [
+        'eslint-config-huawei',
+    ],
+    globals: {
+        // 项目需要的全局变量，false指定变量为只读：
+        //
+        // _: false,
+        // $: false
+    },
+    rules: {
+        // 项目自定义规则配置
+    }
+};
+```
 
 
 ## Vue规则
