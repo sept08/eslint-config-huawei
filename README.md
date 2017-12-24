@@ -1,7 +1,7 @@
 # eslint-config-huawei
-[![Build Status](https://travis-ci.org/sept08/eslint-config-huawei.svg?branch=master)](https://travis-ci.org/sept08/eslint-config-huawei)
-[![npm](https://img.shields.io/npm/dt/eslint-config-huawei.svg)](https://www.npmjs.com/package/eslint-config-huawei)
 [![npm](https://img.shields.io/npm/v/eslint-config-huawei.svg)](https://www.npmjs.com/package/eslint-config-huawei)
+[![npm](https://img.shields.io/npm/dt/eslint-config-huawei.svg)](https://www.npmjs.com/package/eslint-config-huawei)
+[![Build Status](https://travis-ci.org/sept08/eslint-config-huawei.svg?branch=master)](https://travis-ci.org/sept08/eslint-config-huawei)
 [![codebeat badge](https://codebeat.co/badges/eb2806d1-5060-418a-b532-12f4a029646f)](https://codebeat.co/projects/github-com-sept08-eslint-config-huawei-master)
 
 > Huawei Eslint rules
