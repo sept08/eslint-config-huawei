@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-huawei",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "huawei eslint rules",
   "main": "index.js",
   "scripts": {
@@ -15,12 +15,11 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "Tian",
+  "author": "Tian <littlejixing@163.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^8.1.0",
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^2.1.0",
-    "vue-eslint-parser": "^1.0.0"
-  }
+    "vue-eslint-parser": "^1.0.0"  }
 }

@@ -363,5 +363,12 @@ module.exports = {
      * ECMAScript 6
      * These rules relate to ES6, also known as ES2015
      */
+    //
+    'no-confusing-arrow': [
+      'error',
+      {
+        allowParens: true
+      }
+    ]
   }
 }

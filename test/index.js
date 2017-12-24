@@ -1,11 +1,9 @@
 const assert = require('assert');
-const eslint = require('eslint');
-
-const CLIEngine = eslint.CLIEngine;
+const CLIEngine = require("eslint").CLIEngine;
 const cli = new CLIEngine();
 
 const goodReport = cli.executeOnFiles([
-  './**/good.vue'
+  './**/good.js'
 ]);
 
 goodReport.results.forEach((goodReportForOneFile) => {
@@ -13,7 +11,7 @@ goodReport.results.forEach((goodReportForOneFile) => {
 });
 
 const badReport = cli.executeOnFiles([
-  './**/bad.vue'
+  './**/bad.js'
 ]);
 
 badReport.results.forEach((badReportForOneFile) => {
