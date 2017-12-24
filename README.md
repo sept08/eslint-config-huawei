@@ -11,6 +11,9 @@ Huawei eslint rules
 # 使用说明
 ## 基本规则
 ### 安装
+``` shell
+npm install --save-dev eslint-config-huawei babel-eslint
+```
 
 
 ## Vue规则
