@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-huawei",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "huawei eslint rules",
   "main": "index.js",
   "scripts": {
