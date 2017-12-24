@@ -6,7 +6,7 @@ Huawei eslint rules
 *   vue规则：   "eslint-config-huawei/vue"
 
 # 规则约定
-1.  `/rule` 下为规则设置文档
+1.  每条规则均有注释，注释包括存在意义，配置原因
 
 # 使用说明
 ## 基本规则

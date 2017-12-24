@@ -12,15 +12,12 @@ module.exports = {
   env: {
     es6: true,
     node: true,
-    commonjs: true
+    commonjs: true,
+    jquery: true,
+    mocha: true
   },
 
-  "plugins": [
-  "import",
-  "node",
-  "promise",
-  "standard"
-],
+  root: true,
 
   globals: {
     document: false,
@@ -29,165 +26,342 @@ module.exports = {
   },
 
   rules: {
-    "accessor-pairs": "error",
-    "arrow-spacing": ["error", { "before": true, "after": true }],
-    "block-spacing": ["error", "always"],
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "camelcase": ["error", { "properties": "never" }],
-    "comma-dangle": ["error", {
-      "arrays": "never",
-      "objects": "never",
-      "imports": "never",
-      "exports": "never",
-      "functions": "never"
-    }],
-    "comma-spacing": ["error", { "before": false, "after": true }],
-    "comma-style": ["error", "last"],
-    "constructor-super": "error",
-    "curly": ["error", "multi-line"],
-    "dot-location": ["error", "property"],
-    "eol-last": "error",
-    "eqeqeq": ["error", "always", { "null": "ignore" }],
-    "func-call-spacing": ["error", "never"],
-    "generator-star-spacing": ["error", { "before": true, "after": true }],
-    "handle-callback-err": ["error", "^(err|error)$" ],
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-    "keyword-spacing": ["error", { "before": true, "after": true }],
-    "new-cap": ["error", { "newIsCap": true, "capIsNew": false }],
-    "new-parens": "error",
-    "no-array-constructor": "error",
-    "no-caller": "error",
-    "no-class-assign": "error",
-    "no-compare-neg-zero": "error",
-    "no-cond-assign": "error",
-    "no-const-assign": "error",
-    "no-constant-condition": ["error", { "checkLoops": false }],
-    "no-control-regex": "error",
-    "no-debugger": "error",
-    "no-delete-var": "error",
-    "no-dupe-args": "error",
-    "no-dupe-class-members": "error",
-    "no-dupe-keys": "error",
-    "no-duplicate-case": "error",
-    "no-empty-character-class": "error",
-    "no-empty-pattern": "error",
-    "no-eval": "error",
-    "no-ex-assign": "error",
-    "no-extend-native": "error",
-    "no-extra-bind": "error",
-    "no-extra-boolean-cast": "error",
-    "no-extra-parens": ["error", "functions"],
-    "no-fallthrough": "error",
-    "no-floating-decimal": "error",
-    "no-func-assign": "error",
-    "no-global-assign": "error",
-    "no-implied-eval": "error",
-    "no-inner-declarations": ["error", "functions"],
-    "no-invalid-regexp": "error",
-    "no-irregular-whitespace": "error",
-    "no-iterator": "error",
-    "no-label-var": "error",
-    "no-labels": ["error", { "allowLoop": false, "allowSwitch": false }],
-    "no-lone-blocks": "error",
-    "no-mixed-operators": ["error", {
-      "groups": [
-        ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-        ["&&", "||"],
-        ["in", "instanceof"]
-      ],
-      "allowSamePrecedence": true
-    }],
-    "no-mixed-spaces-and-tabs": "error",
-    "no-multi-spaces": "error",
-    "no-multi-str": "error",
-    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
-    "no-negated-in-lhs": "error",
-    "no-new": "error",
-    "no-new-func": "error",
-    "no-new-object": "error",
-    "no-new-require": "error",
-    "no-new-symbol": "error",
-    "no-new-wrappers": "error",
-    "no-obj-calls": "error",
-    "no-octal": "error",
-    "no-octal-escape": "error",
-    "no-path-concat": "error",
-    "no-proto": "error",
-    "no-redeclare": "error",
-    "no-regex-spaces": "error",
-    "no-return-assign": ["error", "except-parens"],
-    "no-return-await": "error",
-    "no-self-assign": "error",
-    "no-self-compare": "error",
-    "no-sequences": "error",
-    "no-shadow-restricted-names": "error",
-    "no-sparse-arrays": "error",
-    "no-tabs": "error",
-    "no-template-curly-in-string": "error",
-    "no-this-before-super": "error",
-    "no-throw-literal": "error",
-    "no-trailing-spaces": "error",
-    "no-undef": "error",
-    "no-undef-init": "error",
-    "no-unexpected-multiline": "error",
-    "no-unmodified-loop-condition": "error",
-    "no-unneeded-ternary": ["error", { "defaultAssignment": false }],
-    "no-unreachable": "error",
-    "no-unsafe-finally": "error",
-    "no-unsafe-negation": "error",
-    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true, "allowTaggedTemplates": true }],
-    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": true }],
-    "no-use-before-define": ["error", { "functions": false, "classes": false, "variables": false }],
-    "no-useless-call": "error",
-    "no-useless-computed-key": "error",
-    "no-useless-constructor": "error",
-    "no-useless-escape": "error",
-    "no-useless-rename": "error",
-    "no-useless-return": "error",
-    "no-whitespace-before-property": "error",
-    "no-with": "error",
-    "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],
-    "one-var": ["error", { "initialized": "never" }],
-    "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
-    "padded-blocks": ["error", { "blocks": "never", "switches": "never", "classes": "never" }],
-    "prefer-promise-reject-errors": "error",
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
-    "rest-spread-spacing": ["error", "never"],
-    "semi": ["error", "never"],
-    "semi-spacing": ["error", { "before": false, "after": true }],
-    "space-before-blocks": ["error", "always"],
-    "space-before-function-paren": ["error", "always"],
-    "space-in-parens": ["error", "never"],
-    "space-infix-ops": "error",
-    "space-unary-ops": ["error", { "words": true, "nonwords": false }],
-    "spaced-comment": ["error", "always", {
-      "line": { "markers": ["*package", "!", "/", ",", "="] },
-      "block": { "balanced": true, "markers": ["*package", "!", ",", ":", "::", "flow-include"], "exceptions": ["*"] }
-    }],
-    "symbol-description": "error",
-    "template-curly-spacing": ["error", "never"],
-    "template-tag-spacing": ["error", "never"],
-    "unicode-bom": ["error", "never"],
-    "use-isnan": "error",
-    "valid-typeof": ["error", { "requireStringLiterals": true }],
-    "wrap-iife": ["error", "any", { "functionPrototypeMethods": true }],
-    "yield-star-spacing": ["error", "both"],
-    "yoda": ["error", "never"],
+    /**
+     * Possible Errors
+     * These rules relate to possible syntax or logic errors in JavaScript code
+     */
+    // enforce “for” loop update clause moving the counter in the right direction.
+    'for-direction': 'error',
+    // enforce return statements in getters, and disallow implicitly returning undefined with a return; statement
+    'getter-return': 'error',
+    // @off Too strict
+    'no-await-in-loop': 'off',
+    // disallow comparing against -0
+    'no-compare-neg-zero': 'error',
+    // disallow assignment operators in conditional expressions, until they are enclosed in parentheses
+    'no-cond-assign': 'error',
+    // @off Too strict
+    'no-console': 'off',
+    // disallow constant expressions in conditions, until in loop
+    'no-constant-condition': [
+      'error',
+      {
+        checkLoops: false
+      }
+    ],
+    // disallow control characters in regular expressions
+    'no-control-regex': 'error',
+    // @autofix disallow the use of debugger
+    'no-debugger': 'error',
+    // disallow duplicate arguments in function definitions
+    'no-dupe-args': 'error',
+    // disallow duplicate keys in object literals
+    'no-dupe-keys': 'error',
+    // disallow duplicate case labels
+    'no-duplicate-case': 'error',
+    // disallow empty block statements
+    'no-empty': [
+      'error',
+      {
+        allowEmptyCatch: true
+      }
+    ],
+    // disallow empty character classes in regular expressions
+    'no-empty-character-class': 'error',
+    // disallow reassigning exceptions in catch clauses
+    'no-ex-assign': 'error',
+    // @autofix disallow unnecessary boolean casts
+    'no-extra-boolean-cast': 'error',
+    // @autofix disallow unnecessary parentheses
+    'no-extra-parens': [
+      "error",
+      "functions"
+    ],
+    // @autofix disallow unnecessary semicolons
+    'no-extra-semi': 'error',
+    // disallow reassigning function declarations
+    'no-func-assign': 'error',
+    // disallow variable or function declarations in nested blocks
+    'no-inner-declarations': 'error',
+    // disallow invalid regular expression strings in RegExp constructors
+    'no-invalid-regexp': 'error',
+    // disallow irregular whitespace outside of strings and comments
+    'no-irregular-whitespace': [
+      'error',
+      {
+        skipComments: false,
+        skipRegExps: true,
+        skipTemplates: true
+      }
+    ],
+    // disallow calling global object properties as functions
+    'no-obj-calls': 'error',
+    // @ff 会用到 hasOwnProperty 来避免对于原型链的循环
+    'no-prototype-builtins': 'off',
+    // @autofix disallow multiple spaces in regular expressions
+    'no-regex-spaces': 'error',
+    // disallow sparse arrays
+    'no-sparse-arrays': 'error',
+    // disallow template literal placeholder syntax in regular strings
+    'no-template-curly-in-string': 'error',
+    // disallow confusing multiline expressions
+    'no-unexpected-multiline': 'error',
+    // disallow unreachable code after return, throw, continue, and break statements
+    'no-unreachable': 'error',
+    // disallow control flow statements in finally blocks
+    'no-unsafe-finally': 'error',
+    // @autofix disallow negating the left operand of relational operators(in/instanceof)
+    'no-unsafe-negation': 'error',
+    // require calls to isNaN() when checking for NaN
+    'use-isnan': 'error',
+    // enforce valid JSDoc comments
+    'valid-jsdoc': [
+      'warn',
+      {
+        requireReturn: false
+      }
+    ],
+    // enforce comparing typeof expressions against valid strings('undefined', 'object', 'boolean', 'number', 'string', 'function' and 'symbol')
+    'valid-typeof': 'error',
 
-    "import/export": "error",
-    "import/first": "error",
-    "import/no-duplicates": "error",
-    "import/no-webpack-loader-syntax": "error",
+    /**
+     * Best Practices
+     * These rules relate to better ways of doing things to help you avoid problems
+     */
+    // enforce setter pairs in objects, but maybe getter
+    'accessor-pairs': 'error',
+    // enforce return statements in callbacks of array methods
+    'array-callback-return': 'error',
+    // enforce the use of variables within the scope they are defined
+    'block-scoped-var': 'error',
+    // enforce that class methods utilize this
+    'class-methods-use-this': 'error',
+    // enforce a maximum cyclomatic complexity allowed in a program
+    'complexity': [
+      'error',
+      {
+        max: 20
+      }
+    ],
+    // @ff Too strict
+    'consistent-return': 'off',
+    // @autofix enforce consistent brace style for all control statements
+    'curly': [
+      'error',
+      'multi-line',
+      'consistent'
+    ],
+    // @ff Too strict
+    'default-case': 'off',
+    // @autofix enforce consistent newlines before and after dots
+    'dot-location': [
+      'error',
+      'property'
+    ],
+    // enforce dot notation whenever possible
+    'dot-notation': 'error',
+    // require the use of === and !==
+    'eqeqeq': [
+      'error',
+      'always',
+      {
+        null: 'ignore'
+      }
+    ],
+    // require for-in loops to include an if statement(至少需包含hasOwnProperty)
+    'guard-for-in': 'error',
+    // @off
+    'no-alert': 'off',
+    // disallow the use of arguments.caller or arguments.callee
+    'no-caller': 'error',
+    // disallow lexical declarations in case clauses
+    'no-case-declarations': 'error',
+    // @off no negative impact
+    'no-div-regex': 'off',
+    // @off
+    'no-else-return': 'off',
+    // disallow empty functions, until
+    'no-empty-function': [
+      'error',
+      {
+        allow: [
+          'functions',
+          'arrowFunctions'
+        ]
+      }
+    ],
+    // disallow empty destructuring patterns
+    'no-empty-pattern': 'error',
+    // @off
+    'no-eq-null': 'off',
+    // disallow the use of eval()
+    'no-eval': 'error',
+    // disallow extending native types
+    'no-extend-native': 'error',
+    // @autofix disallow unnecessary calls to .bind()
+    'no-extra-bind': 'error',
+    // @autofix	disallow unnecessary labels
+    'no-extra-label': 'error',
+    // disallow fallthrough of case statements
+    'no-fallthrough': 'error',
+    // @autofix disallow leading or trailing decimal points in numeric literals
+    'no-floating-decimal': 'error',
+    // disallow assignments to native objects or read-only global variables
+    'no-global-assign': 'error',
+    // disallow shorthand type conversions
+    'no-implicit-coercion': [
+      'error',
+      {
+        allow: [
+          '!!'
+        ]
+      }
+    ],
+    // disallow variable and function declarations in the global scope
+    'no-implicit-globals': 'error',
+    // disallow the use of eval()-like methods(setTimeout 或 setInterval 中传入字符串)
+    'no-implied-eval': 'error',
+    // @off 什么鬼
+    'no-invalid-this': 'off',
+    // disallow the use of the __iterator__ property
+    'no-iterator': 'error',
+    // disallow labeled statements
+    'no-labels': 'error',
+    // disallow unnecessary nested blocks
+    'no-lone-blocks': 'error',
+    // disallow function declarations and expressions inside loop statements
+    'no-loop-func': 'error',
+    // @off
+    'no-magic-numbers': 'off',
+    // @autofix disallow multiple spaces
+    'no-multi-spaces': [
+      'error',
+      {
+        ignoreEOLComments: true,
+        exceptions: {
+          Property: true,
+          BinaryExpression: false,
+          VariableDeclarator: true,
+          ImportDeclaration: true
+        }
+      }
+    ],
+    // disallow multiline strings
+    'no-multi-str': 'error',
+    // disallow new operators outside of assignments or comparisons
+    'no-new': 'error',
+    // disallow new operators with the Function object
+    'no-new-func': 'error',
+    // disallow new operators with the String, Number, and Boolean objects
+    'no-new-wrappers': 'error',
+    // @autofix disallow octal literals
+    'no-octal': 'error',
+    // disallow octal escape sequences in string literals
+    'no-octal-escape': 'error',
+    // disallow reassigning function parameters
+    'no-param-reassign': 'error',
+    // disallow the use of the __proto__ property
+    'no-proto': 'error',
+    // @autofix disallow variable redeclaration
+    'no-redeclare': 'error',
+    // disallow certain properties on certain objects (用于限制某个具体api不能只用，请业务层自定义)
+    'no-restricted-properties': 'off',
+    // disallow assignment operators in return statements
+    'no-return-assign': [
+      'error',
+      'always'
+    ],
+    // disallow unnecessary return await
+    'no-return-await': 'error',
+    // disallow javascript: urls
+    'no-script-url': 'error',
+    // @autofix disallow assignments where both sides are exactly the same
+    'no-self-assign': 'error',
+    // disallow comparisons where both sides are exactly the same
+    'no-self-compare': 'error',
+    // disallow comma operators
+    'no-sequences': 'error',
+    // disallow throwing literals as exceptions
+    'no-throw-literal': 'error',
+    // disallow unmodified loop conditions
+    'no-unmodified-loop-condition': 'error',
+    // Disallow Unused Expressions
+    'no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true,
+        allowTernary: true,
+        allowTaggedTemplates: true
+      }
+    ],
+    // @autofix disallow unused labels
+    'no-unused-labels': 'error',
+    // disallow unnecessary calls to .call() and .apply()
+    'no-useless-call': 'error',
+    // disallow unnecessary concatenation of literals or template literals
+    'no-useless-concat': 'error',
+    // disallow unnecessary escape characters
+    'no-useless-escape': 'error',
+    // @autofix disallow redundant return statements
+    'no-useless-return': 'error',
+    // disallow void operators
+    'no-void': 'error',
+    // warning specified warning terms in comments
+    'no-warning-comments': 'warn',
+    // disallow with statements
+    'no-with': 'error',
+    // require using Error objects as Promise rejection reasons
+    'prefer-promise-reject-errors': 'error',
+    // enforce the consistent use of the radix argument when using parseInt()
+    'radix': 'error',
+    // @off 管的有点宽
+    'require-await': 'off',
+    // @off 什么鬼
+    'vars-on-top': 'off',
+    // require parentheses around immediate function invocations
+    'wrap-iife': [
+      'error',
+      'inside',
+      {
+        functionPrototypeMethods: true
+      }
+    ],
+    // require or disallow “Yoda” conditions
+    'yoda': [
+      'error',
+      'never',
+      {
+        onlyEquality: true
+      }
+    ],
 
-    "node/no-deprecated-api": "error",
-    "node/process-exit-as-throw": "error",
+    /**
+     * Strict Mode
+     * These rules relate to strict mode directives
+     */
 
-    "promise/param-names": "error",
 
-    "standard/array-bracket-even-spacing": ["error", "either"],
-    "standard/computed-property-even-spacing": ["error", "even"],
-    "standard/no-callback-literal": "error",
-    "standard/object-curly-even-spacing": ["error", "either"]
+    /**
+     * Variables
+     * These rules relate to variable declarations
+     */
+
+
+    /**
+     * Node.js and CommonJS
+     * These rules relate to code running in Node.js, or in browsers with CommonJS
+     */
+
+
+    /**
+     * Stylistic Issues
+     * These rules relate to style guidelines, and are therefore quite subjective
+     */
+
+
+    /**
+     * ECMAScript 6
+     * These rules relate to ES6, also known as ES2015
+     */
   }
 }
