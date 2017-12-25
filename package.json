@@ -18,11 +18,10 @@
   "author": "Tian <littlejixing@163.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "^8.1.1",
     "eslint": "^4.14.0",
     "eslint-plugin-vue": "^4.0.0-beta.4",
     "vue-eslint-parser": "^2.0.1-beta.2"
   },
-  "dependencies": {
-    "babel-eslint": "^8.1.1"
-  }
+  "dependencies": {}
 }

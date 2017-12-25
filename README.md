@@ -17,7 +17,7 @@
 ## 基本规则
 ### 安装
 ``` shell
-npm install --save-dev eslint-config-huawei
+npm install --save-dev eslint-config-huawei babel-eslint
 ```
 ### 配置方法
 在项目根目录下创建`.eslintrc.js`，并复制以下内容：
@@ -42,7 +42,7 @@ module.exports = {
 ## Vue规则
 ### 安装
 ``` shell
-npm install --save-dev eslint-config-huawei eslint-plugin-vue@next vue-eslint-parser@2.0.1-beta.2
+npm install --save-dev eslint-config-huawei babel-eslint eslint-plugin-vue@next vue-eslint-parser@2.0.1-beta.2
 ```
 ### 配置方法
 ``` javascript
