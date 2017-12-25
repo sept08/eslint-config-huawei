@@ -48,7 +48,7 @@ npm install --save-dev eslint-config-huawei eslint-plugin-vue@next vue-eslint-pa
 ``` javascript
 module.exports = {
   extends: [
-    'eslint-config-alloy/vue',
+    'eslint-config-huawei/vue',
   ],
   globals: {
     // 项目需要的全局变量，false指定变量为只读：
