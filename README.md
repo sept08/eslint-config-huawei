@@ -61,3 +61,14 @@ module.exports = {
   }
 };
 ```
+
+## VSCode配置
+### 安装eslint插件
+`Ctr+Shift+X`打开Extensions，搜索ESlint并安装，重启VSCode
+### 配置
+`File-->Preferences-->Settings`或`Ctrl + Comma`打开设置文件`settings.json`，添加如下配置
+``` javascript
+"eslint.options": {
+  "configFile": "D:/xx/.eslintrc.js"
+}
+```
