@@ -340,19 +340,87 @@ module.exports = {
      * Strict Mode
      * These rules relate to strict mode directives
      */
-
+    // @fixable disallow strict mode directives ("use strict")
+    'strict': [
+      'error',
+      'never'
+    ],
 
     /**
      * Variables
      * These rules relate to variable declarations
      */
-
-
+    // require or disallow initialization in variable declarations. Too strict
+    'init-declarations': 'off',
+    // Disallow Shadowing of Variables Inside of catch. IE9+后无影响
+    'no-catch-shadow': 'off',
+    // disallow deleting variables
+    'no-delete-var': 'error',
+    // Disallow Labels That Are Variables Names
+    'no-label-var': 'error',
+    // Disallow specific global variables
+    'no-restricted-globals': 'off',
+    // disallow variable declarations from shadowing variables declared in the outer scope
+    'no-shadow': 'off',
+    // Disallow Shadowing of Restricted Names
+    'no-shadow-restricted-names': 'error',
+    // Disallow Undeclared Variables
+    'no-undef': [
+      'error',
+      {
+        typeof: false
+      }
+    ],
+    // @fixable Disallow Initializing to undefined
+    'no-undef-init': 'error',
+    // Disallow Use of undefined Variable
+    'no-undefined': 'error',
+    // Disallow Unused Variables
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'none',
+        caughtErrors: 'none',
+        ignoreRestSiblings: true
+      }
+    ],
+    // Disallow Early Use
+    'no-use-before-define': [
+      'error',
+      {
+        functions: false,
+        classes: false,
+        variables: false
+      }
+    ],    
+    
     /**
      * Node.js and CommonJS
      * These rules relate to code running in Node.js, or in browsers with CommonJS
      */
-
+    // Enforce Return After Callback
+    'callback-return': 'off',
+    // Enforce require() on the top-level module scope , Too Strict
+    'global-require': 'off',
+    // Enforce Callback Error Handling
+    'handle-callback-err': 'error',
+    // Disallow use of the Buffer() constructor
+    'no-buffer-constructor': 'error',
+    // Disallow 'require' calls to be mixed with regular variable declarations
+    'no-mixed-requires': 'off',
+    // Disallow new require
+    'no-new-require': 'error',
+    // Disallow string concatenation when using __dirname and __filename
+    'no-path-concat': 'error',
+    // Disallow process.env
+    'no-process-env': 'off',
+    // Disallow process.exit()
+    'no-process-exit': 'off',
+    // Disallow Node.js modules
+    'no-restricted-modules': 'off',
+    // Disallow Synchronous Methods
+    'no-sync': 'off',
 
     /**
      * Stylistic Issues
