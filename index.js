@@ -358,7 +358,18 @@ module.exports = {
      * Stylistic Issues
      * These rules relate to style guidelines, and are therefore quite subjective
      */
-
+    'require-jsdoc': [
+      'warn',
+      {
+        require: {
+          FunctionDeclaration: true,
+          MethodDefinition: false,
+          ClassDeclaration: false,
+          ArrowFunctionExpression: false,
+          FunctionExpression: false
+        }
+      }
+    ],
 
     /**
      * ECMAScript 6
