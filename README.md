@@ -10,8 +10,11 @@
 *   基本规则：  "eslint-config-huawei"
 *   vue规则：   "eslint-config-huawei/vue"
 
-# 规则约定
-1.  每条规则均有注释，注释包括存在意义，配置原因
+# 规则说明
+规则设置文档可参阅(待完善)[wiki](https://github.com/sept08/eslint-config-huawei/wiki)
+暂时可参阅配置文件：
+*  [基本配置](https://github.com/sept08/eslint-config-huawei/blob/master/index.js)
+*  [Vue配置](https://github.com/sept08/eslint-config-huawei/blob/master/vue.js)
 
 # 使用说明
 ## 基本规则
