@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    './index.js',
+    './index.js'
   ],
   parser: 'vue-eslint-parser',
   plugins: [
@@ -8,7 +8,7 @@ module.exports = {
   ],
   rules: {
 
-    /*********** Enforce ***********/
+    /** ********* Enforce ***********/
 
     // computed属性异步可能导致不确定行为
     'vue/no-async-in-computed-properties': 'error',
@@ -51,7 +51,7 @@ module.exports = {
     'vue/no-multi-spaces': 'error',
 
 
-    /*********** Strongly Recommended ***********/
+    /** ********* Strongly Recommended ***********/
 
     // v-for加上key高效更新DOM
     'vue/require-v-for-key': 'error',
@@ -71,32 +71,32 @@ module.exports = {
     // 组件DOM中不加this
     'vue/this-in-template': 'error',
     // 组件中官方推荐的option顺序
-    "vue/order-in-components": ["error", {
-        order: [
-          "el",
-          "name",
-          "parent",
-          "functional",
-          ["delimiters", "comments"], // 中括号中同等顺序等级
-          ["components", "directives", "filters"],
-          "extends",
-          "mixins",
-          "inheritAttrs",
-          "model",
-          ["props", "propsData"],
-          "data",
-          "computed",
-          "watch",
-          "LIFECYCLE_HOOKS",
-          "methods",
-          ["template", "render"],
-          "renderError"
-        ]
-      }
+    'vue/order-in-components': ['error', {
+      order: [
+        'el',
+        'name',
+        'parent',
+        'functional',
+        ['delimiters', 'comments'], // 中括号中同等顺序等级
+        ['components', 'directives', 'filters'],
+        'extends',
+        'mixins',
+        'inheritAttrs',
+        'model',
+        ['props', 'propsData'],
+        'data',
+        'computed',
+        'watch',
+        'LIFECYCLE_HOOKS',
+        'methods',
+        ['template', 'render'],
+        'renderError'
+      ]
+    }
     ],
 
 
-    /*********** Ignore ***********/
+    /** ********* Ignore ***********/
 
     // 不限制组件data一定要有return
     'vue/no-shared-component-data': 'off',
@@ -116,7 +116,7 @@ module.exports = {
     // 不限制组件名称样式
     'vue/name-property-casing': 'off',
     // props不限制是否有默认值
-    'vue/require-default-prop': 'off',
+    'vue/require-default-prop': 'off'
 
   }
 }

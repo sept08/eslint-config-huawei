@@ -9,7 +9,7 @@ export default {
    * vue data object
    * @returns {{message: number}} data
    */
-  data () {
+  data() {
     return {
       message: 1
     }
