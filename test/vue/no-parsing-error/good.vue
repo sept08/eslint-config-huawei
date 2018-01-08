@@ -1,5 +1,7 @@
 <template>
-  <div class='container'>
+  <div class='container'
+       @click='open = !open'
+  >
     {{ message }}
   </div>
 </template>
@@ -11,7 +13,8 @@ export default {
    */
   data() {
     return {
-      message: 1
+      message: 1,
+      open: true
     }
   }
 }

@@ -109,7 +109,7 @@ module.exports = {
     // @off 有的标签不必严格符合规定，如 <br> 或 <br/> 都应该是合法的
     'vue/html-end-tags': 'off',
     // @off 没必要限制
-    'vue/html-indent': 'off',
+    'vue/html-indent': 'error',
     'vue/html-self-closing': 'off',
     // 不限制每行属性
     'vue/max-attributes-per-line': 'off',
@@ -117,6 +117,5 @@ module.exports = {
     'vue/name-property-casing': 'off',
     // props不限制是否有默认值
     'vue/require-default-prop': 'off'
-
   }
 }
